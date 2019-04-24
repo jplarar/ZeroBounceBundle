@@ -30,10 +30,10 @@ class ZeroBounceClient
      * @param $ip
      * @return bool
      */
-    public function validateEmail($email)
+    public function validateEmail($email, $ip)
     {
         $url = self::SERVER_URL . self::VALIDATE_PATH;
-        $queryString = '?api_key=' . $this->apiKey.'&email=' . urlencode($email);
+        $queryString = '?api_key=' . $this->apiKey.'&email=' . urlencode($email) . '&ip_address=' . urlencode($ip);
         $ch = curl_init($url.$queryString);
         curl_setopt($ch, CURLOPT_SSLVERSION, 6);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -47,7 +47,7 @@ class ZeroBounceClient
 
         // Validate status
         if (!array_key_exists('status', $response)) return false;
-        if ($response['status'] != self::STATUS_VALID || $response['status'] != self::STATUS_CATCH_ALL) return false;
+        if ($response['status'] != self::STATUS_VALID && $response['status'] != self::STATUS_CATCH_ALL) return false;
 
         // TODO validate Sub Status
         // https://www.zerobounce.net/docs/#status-codes-v2
