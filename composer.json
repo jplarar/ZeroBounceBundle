@@ -1,0 +1,37 @@
+{
+    "name": "jplarar/zero-bounce-bundle",
+    "description": "A simple Symfony 3 bundle for the API for ZeroBounce.",
+    "type": "symfony-bundle",
+    "keywords": [
+        "jplarar",
+        "zero bounce",
+        "symfony"
+    ],
+    "homepage": "https://github.com/jplarar/ZeroBounceBundle",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Juan Paulo Lara",
+        "email": "jplarar@gmail.com",
+        "role": "developer"
+      }
+    ],
+    "require": {
+      "php": ">=7.1",
+      "symfony/config": "^3.0",
+      "symfony/dependency-injection": " ^3.0",
+      "symfony/framework-bundle": " ^3.0",
+      "symfony/http-foundation": " ^3.0",
+      "symfony/http-kernel": " ^3.0",
+      "symfony/options-resolver": " ^3.0",
+      "symfony/validator": " ^3.0"
+    },
+    "suggest": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+      "psr-0": { "Jplarar\\ZeroBounceBundle": "" }
+    },
+    "target-dir": "Jplarar/ZeroBounceBundle"
+}

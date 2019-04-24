@@ -1,0 +1,11 @@
+parameters:
+     zero_bounce_client.class: Jplarar\ZeroBounceBundle\Services\ZeroBounceClient
+
+services:
+     Jplarar\ZeroBounceBundle\Services\ZeroBounceClient: "@zero_bounce_client"
+     zero_bounce_client:
+         class:     %zero_bounce_client.class%
+         arguments: [%zero_bounce_api_key%]
+         autowire: true
+
+
