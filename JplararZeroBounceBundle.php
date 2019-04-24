@@ -1,7 +1,7 @@
 <?php
 namespace Jplarar\ZeroBounceBundle;
 
-use Jplarar\ConektaBundle\DependencyInjection\JplararConektaExtension;
+use Jplarar\ZeroBounceBundle\DependencyInjection\JplararZeroBounceExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class JplararZeroBounceBundle extends Bundle
