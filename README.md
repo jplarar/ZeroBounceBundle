@@ -11,7 +11,7 @@ Add S3 Bundle in your composer.json:
 ```js
 {
     "require": {
-        "jplarar/zero-bounce-bundle": "0.0.1"
+        "jplarar/zero-bounce-bundle": "1.0.0"
     }
 }
 ```
